@@ -1,0 +1,59 @@
+Metniniz: Soğuk ve karlı bir yılbaşı gecesiymiş yoldan geçen insanlar paltolarını giymiş, eldiven atkı ve şapkalarını takmış. 
+Hızlı hızlı yürüyerek bir yerlere yetişmeye çalışıyorlarmış. Bazıları evlerine geç kalmış acele ediyorlarmış. 
+Bazıları ise yeni yılı kutlamak üzere eğlence yerlerine gidiyorlarmış. Sokakta çocuklar koşuşuyorlar birbirlerine kar topu atıyorlarmış. 
+Karın keyfini en çok onlar çıkarıyormuş tabii. Kahkahalar ile gülüyor neşeyle şakalaşıyorlarmış. 
+Sokakta diğer çocuklarından farklı bir kız çocuğu daha varmış. Küçük bir kız yolun ortasında durmuş. 
+
+|CumlelereAyir:| fonksiyonu kendisine gönderilen metni split fonksiyonu yardımıyla noktalara göre ayırır ve bir listeye atar. Liste boyutu bir azaltılarak boyutu döndürülür.
+Cumle Sayisi:9
+
+|kelimelereAyir:| fonksiyonu kendisine gönderilen metni split fonksiyonu yardımıyla ayırır ve bir diziye atar listeye boyutunu döndürür.
+Kelime Sayisi:72
+
+|sesliHarfleriSay:| fonksiyonu kendisine gönderilen metnin her bir karakterini sesli harfler listesinin içinde olup olmadığına bakar. 
+Bakılan karakter sesli harf ise sesli harf sayacini artirir metnin karakterleri bittiğinde  sesli harf sayacinin değerini geri döndürür.
+Sesli Harf Sayisi:202
+
+|buyukUnluUyumKontrolEt:| fonksiyonu kendisine gönderilen metnin her bir kelimesini split fonksiyonu ile bir listeye atar.
+Her bir kelime her bir harfi ince ünlüler ve kalın ünlüler listesi içinde olup olmadığına bakılır kelime sadece ince unlu veya kalin unlulerden olusuyor ise
+Ünlü uyumuna uyan sayac 1 arttırılır. İkisinede uyuyorsa unlu uyumuna uymayan sayac 1 arttırılır ve sayaclar tuple olarak geri döndürülür.
+Büyük Ünlü Uyumuna Uymayan Sayisi:6
+Büyük Ünlü Uyumuna Uyan Sayisi:66
+
+|sha1:| Bir hash şifrleme yöntemidir. Bir  mesajı uzunluğundan daha kısa bir bit dizisi elde etmeye çalışır. 
+160 bitlik özet oluşturur. Verilen metnin sifreli bitleri onaltılık biçimde döndürülür.
+Metnin Sha1 İle Sifrelenmiş Hali:2debaa900abaaacbb77c58857e0f5de9c10bae5d
+
+|sha224:| Bir hash şifrleme yöntemidir. 224 bittir. SHA-2 şifreleme karma işlevleri grubunun bir parçasıdır.
+Karma işlevi, metin dosyası gibi rastgele bir veri öğeleri kümesini tek bir sabit uzunluk değerine (karma) dönüştüren (karma) bir algoritmadır.
+Verilen metni sifreli bir sekilde geri döndürülür.
+Metnin Sha224 İle Sifrelenmiş Hali:f23fcf1e4906abdefdc96818c9824e6a7036aba6a6516ccf44f2f57e
+
+|sha256:| Bir hash şifrleme yöntemidir. 256 bit boyutunda olup veriler hash değerlerine dönüştürülür. 
+Tek yönlü bir şifreleme algoritmasıdır. Kodlanmış veriler onaltılık biçimde döndürülür.
+Metnin Sha256 İle Sifrelenmiş Hali:5ae77b2d5c46f2a365e1110ca5b807084a47aa9dc01289e1b0900a6840098913
+
+|sha384:| Bir hash şifrleme yöntemidir. Sha 1' in evrimi olan şifreleme algoritmasıdır. 
+Çıktı 384 bitte kesilmesi dışında Sha512 ile aynı şifrelemedir.
+Metnin Sha384 İle Sifrelenmiş Hali:c84979f2f2a779bd8b8c553fdf003d8a667e3427d2d62aa8e852951550573b874e09ad5042b9c30ec4356fb927cca80d
+
+|sha512:| Bir hash şifrleme yöntemidir. Herhangi bir uzunluktaki metni sabit boyutlu bir dizeye dönüştürmek için kullanılan bir karma algoritmadır.
+Her çıktı, 512 bitlik (64 bayt) bir SHA-512 uzunluğu üretir.
+Metnin Sha512 İle Sifrelenmiş Hali:990ee44dfd29f7287c59791c809f942e71f045333ad7f48880481aeed09069d651a11f89a154adb9008250ca5839269682c0679f2d5d4d9f8d9e968a3e1b9e5a
+
+|md5:| Bir hash şifrleme yöntemidir. MD5, metni 128 bitlik uzunluğa dönüştürür verileri her biri 32 bitten oluşan 16 kelimeye bölünmüş 512 bitlik diziler halinde işler.
+MD5'ten gelen çıktı, 128 bitlik bir mesaj özeti değeridir.
+Önceki aşamada hesaplanan değerle birlikte her 512 bitlik veri bloğunu işleyen ayrı aşamalarda gerçekleştirilir. 
+İlk aşama, ardışık onaltılık sayısal değerler kullanılarak başlatılan mesaj özeti değerleriyle başlar. 
+Her aşama, mevcut veri bloğundaki değerleri ve önceki bloktan işlenen değerleri işleyen dört mesaj özeti geçişi içerir. 
+Son bloktan hesaplanan son değer, o blok için MD5 özeti olur.
+Metnin Md5 İle Sifrelenmiş Hali:86ce7ffc64989f8c7d686cea6bd9c06d
+
+|fernetSifrele:| Bir simetrik sifreleme yöntemidir. Fernet, şifrelenen mesajın anahtar olmadan okunmamasını sağlayan simetrik bir şifreleme yöntemidir.
+Anahtar Fernetin kurucu  metoduna  parametre olarak verilir ve fernet nesnesi olusturulur. Str encode(utf-8 e gore) edilir sonra byte cevrilir ve sifrelenir.
+Metnin Fernent İle Sifrelenmiş Hali:b'gAAAAABhzGH_h_82rrS2_cjXOaAA1aWUoeM3JlusRQsyMIV1qvqoSh_e23k6vV2gP9mmd-jIkn1FFc9vP09QNPsceMM73fByF_cx3_zJDb1Pc_lFINATBz-7qIu_Ldk1aW31BKKtmz9QCkD-Y8ju9hdxEWP3zG-cV3GtoIUtiXiv9FwbP0DDYV44H88YfxNxV8Xst7Ulu6utjqbg-hVkD2Tp57tXNM-QCT2fGFf4L3WuTWsiEfB1A4Wwv_n16GIO9KVS3yFi8lFCkUNMUgkbigSVbGE_Xej_XZmBBwJgsp4TPzrAuFNuyflSBZdltwcJYqeUquvDmo82sTcn5SEMxwn1I9JQp8SdFcWYL95sqgjxOF2FATs1NB5w4oOuGVhinGGjWHxXpEdEwJIysFNhq__LaowblILb-QRsCKJc_eUyn5Jz2XEvRyubsctvsZe6InDelxXUD_i3UMzRjF80HDuqiYEcH27v9tPCtz13t96gHp7d7jvER7j8eyc89Rr8J3A13OEhJKJUjSjKOIDUDwZgza9pD0mS_gVAAyBryTzDKfND8I1zmTQSIk5EKp9Plb9m-sGaDTNq_rEFZYKaDQvtpyCbf0Nuhv4Hx6tDU0eVxK71xhn5T11qQ3v6CLp_vs1PrxI9aKNzw0-Al3rl3q19IIcOxT70feH7os_Z8rj5GuD0TfpoRxGkJPL2dJ9V6zlruRWeD9UGm1cXI6ifBg-rLCJSFFA7Niuwodlzdf65fDodMXSqGI6swzVw7MkJG-LhVyxsodABELLFDP5sqoj9H4kaap3rsWbYseGhviU0rlb3SaOm4AdyAxiSp7q_Tlpzobdu3bpWmOaSWxlwaOw8QyEv_ElOUhm0XyzVouBM77XDyIrk2hrfK-x3jqlVX45OAwM8CeNf2nOVYfdwOnF5w22OQXOEGr1BjXGgiUsYctF9s5b_cEo='
+
+|ecies:| Bir asimetrik sifreleme yöntemidir. Fernet, 56 bit ECC public anahtarını kullanarak bir mesajı şifreler. Asimetrik şifrelemedir. 
+Publickey onaltılık tabana çevrilir. Şifrelemek istediğimiz metin encode edilerek encrypt edildi. Encrypt olan metin ikilik gösterimden onaltılıya dönüştürüldü.
+Metnin Ecies İle Sifrelenmiş Hali: b'04407f2fe02c7422a30455c85629deff1347b1e30a682d8eaecababb894cfbe6792a9866d68dad4ac1f3001d18a7be7dd8791b6de5eda974e0a56e3b99a48ab991e4f8d373c880904d69c9f8ef916563ec175c5cd92b1d8d820a873a6fee63616556896f70eee349866360ae5468f3cb74aad06dfa6d2ec0b53eadb9592b0171b4eb8eeceb2f6a54374984e5a031a5a38aa415f03821d52aa1841ec1f3f5d82928dfb1f8d98348005abe2f9f05e2724c7f41c50cb5b5134b3dc9ed812d623228b21c99bee6b473ec6107e766a00b8928754162e1923c74ffd2871b1e78b21752024873487130dd3791fa80982b740a44a4ff1c2ac1ca166dab6a6cc6798d913792bcbf90aea41824b0dafbc8e61aeb64f7abd72132422cc90b279ec2dc7d2302760b304d2b26c19770da7c8cf34e11b355afcdd42db5b453c1597c38867ccb021c71229275ee99c2fc341ca284fb33d3addc75f63606547fa150788ef6c2b16e16cf453658f4d1019cc8de99acf9eca8a2e73d9b25a72426b94b323b9034402015efb4734a542d08969de09b5019faff8eba77eb3a6cc18ba5c74c5a29ca0c0be62b913f071d313cc6da3c9fbf73c7e6fe0e310bc591bbb32de9c54a166c0cdc3707301f43b66a26d13ef7318565d8baa4c478bb02e24e98f914c441d59ab87abe408ac2a74f9b4a25debf511c0b7189775a7390f9159fae7d937375492081ebcd77ecf8793530cd6942f3c9bdf81eb5587e9d604dac27d85a48e1fedbcefac918fae11b1a4b9cb12cfc77f1747e95f79c5471f73edae108c16296066b7986fcda5d8207da0d38fe25ede85c618b4569fccf294d964974ac358e381e96182d97ef1164c73b95a3352d1cf8e26cbe76540c81a28fdd017336fbc0111ffb33ddbda7995684d2e3e42008f247e66618979261641ea45e8989da39ee556aaf9dbad45d7ac1a1297053ed0821e1671cbb095275b1974349032f7d1df52dc0f6f5be63ae688d31520cf3acc391a66eb89e4180dfe506c4228871d8b4235a3262c8b33b1a495ac4bd'
+
