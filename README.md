@@ -16,4 +16,5 @@ Python kısmında ise hazır olarak 6 tane hash ve 1 asimetrik ile 1 simetrik ha
 ## Projenin  Çalıştırılması
 
 Projeyi çalıştırabilmek için proje klasöründe bulunan
-VeriTabani.bacpac dosyasını microsoft sql server programınıza aktarmanız gerekmektedir
+TurRehberi.bacpac dosyasını microsoft sql server programınıza aktarmanız gerekmektedir.
+Python kısmında ise PythonModul.py import ederek .main fonksiyonunu çağırmanız gerekmektedir.
