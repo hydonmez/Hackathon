@@ -128,7 +128,7 @@ class HELP:
     
     def SifrelemeYontemleriSinifi(self, metin):
         
-          #try:
+          try:
             sifre=SifrelemeYontemleri() # pyAdi.classAdi ile Sifreleme Yontemleri Sinifinin nesnesi olusturuldu
             ##ata olmadigi zaman sifreler ekrana yazdirlir
             HELP.dosya.write("\n")
@@ -174,12 +174,12 @@ Publickey onaltılık tabana çevrilir. Şifrelemek istediğimiz metin encode ed
                                (metin, sifre.sha1(metin), sifre.sha224(metin), sifre.sha256(metin), sifre.sha384(metin), sifre.sha512(metin), sifre.md5(metin), str(sifre.fernetSifrele(metin)),  str(sifre.ecies(metin))))
             HELP.conn.commit()
             print("Veritabanına Eklendi")  
-          #except AttributeError:
-             #print()
-             #print("Lütfen Metin Giriniz!")
-          #except OverflowError:
-             #print()
-             #print("Hata: Dosya İçerisindeki Metin Çok Uzun")
+          except AttributeError:
+             print()
+             print("Lütfen Metin Giriniz!")
+          except OverflowError:
+             print()
+             print("Hata: Dosya İçerisindeki Metin Çok Uzun")
 
         
     def DilKontrolSinifi(self, metin):
@@ -224,12 +224,12 @@ Her bir kelime her bir harfi ince ünlüler ve kalın ünlüler listesi içinde 
        dosya.close()
        dosya=open(dosyaYolu,"r",encoding="utf-8")
     
-       print("Dil Kuralları için Fonksiyonların Çalışması:",'\n')
+       print("Dil Kuralları için Fonksiyonların Çalışması:",'\n')#dil kontrolu yapmak için tekrar acıyorum
        nesne.DilKontrolSinifi(dosya.read())
        dosya.close()
        
        dosya=open(dosyaYolu,"r",encoding="utf-8")
-       print("Şifreleme Yöntemleri için Fonksiyonların Çalışması:",'\n')
+       print("Şifreleme Yöntemleri için Fonksiyonların Çalışması:",'\n')#Metni sifreleme için tekrar acıyorum
        dosya=open(dosyaYolu,"r",encoding="utf-8")
        nesne.SifrelemeYontemleriSinifi(dosya.read())
        
