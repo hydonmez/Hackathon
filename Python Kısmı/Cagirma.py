@@ -9,5 +9,6 @@ import PythonModul
 
 modul=PythonModul.HELP()
 modul.main()
+modul.SifrelemeYontemleriSinifi(metin)
 
 
