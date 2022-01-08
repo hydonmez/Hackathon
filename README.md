@@ -1,4 +1,4 @@
-# Borsa Uygulaması
+# Hackathon uygulama
 
 ## Proje Ekip Üyeleri:
 
